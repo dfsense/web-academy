@@ -1,0 +1,91 @@
+/*
+
+!!! Не изменять и не дописывать ничего внутри тега <body> !!!
+
+1. обнулить отступ для body
+
+2. все <div class="page"> должны быть на 100% по высоте экрана
+
+3. цвета фонов у .page такие: #d99, #987
+
+4. размер шрифта 30px
+
+5. в первом .page есть div:
+	1) он должет равнятсья половине экрана по ширине
+	2) всему экрану по высоте
+	3) прижат к правому краю
+	4) цвет фона #b88
+	Внутри этого div есть p:
+		1) 100х100px
+		2) цвет фона #377
+		3) выровнян относительно родителся ровно по центру
+
+6. во втором .page есть div первого уровня:
+	1) 100x100px
+	2) внешний отступ 20px
+	3) цвет фона #838
+	4) эти блоки должны идти вряд
+	5) в каждом нечетном блоке нужно поставить цвет
+	   фона ребенка в #535
+	в этих div есть внутренний div:
+		1) у них цвет текста белый
+		2) начертакие sans-serif
+7. в конце есть p элементы
+	1) указываем первому цвет текста green
+	   второму aqua
+*/
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+html, body, .page{
+    height: 100%;
+}
+.page:nth-child(1) {
+    background-color: #d99;
+    position: relative;
+}
+.page:nth-child(2) {
+    background-color: #987;
+}
+.page:nth-child(1) div{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    background-color: #b88;
+    line-height: 50%;
+}
+.page:nth-child(1) p{
+    width: 100px;
+    height: 100px;
+    background-color: #377;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px -50px;
+}
+.page:nth-child(2)>div{
+    background-color: #838;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.page:nth-child(2)>div>div{
+    color: white;
+    font-family: sans-serif;
+}
+
+.page:nth-child(2)>div:nth-child(2n + 1)>div{
+    background-color: #535;
+}
+.page+p{
+    color: green;
+}
+.page+p+p{
+    color: aqua;
+}
