@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+}
+
+html {
+    font-size: 1.0204082vw;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 20rem;
+    background-color: coral;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    border-radius: 0 0 1rem 0;
+}
+
+nav>ul {
+    list-style: none;
+    margin-left: 2rem;
+}
+nav>ul>li>a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 17rem;
+    line-height: 4rem;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.selected {
+    border-radius: 1rem 0 0 1rem;
+    background-color: brown;
+}
+ 
+
+nav>ul>li>a:hover {
+    background-color: chocolate;
+    color: black;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.content {
+    width: 98rem;
+    background-color: aquamarine;
+    font-size: 1.6rem;
+    padding-top: 3rem;
+}
+
+.content-article {
+    margin-left: 22rem;
+    margin-bottom: 3rem;
+    width: 60rem;
+    min-height: 54.6rem;
+    box-sizing: border-box;
+}
+
+.article {
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    margin-bottom: 1rem;
+/*    border: 0.1rem solid black;*/
+}
+
+.article>.circle-start {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50% 50% 50% 50%;
+    background-color: blueviolet;
+}
+.article>.circle-end {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50% 50% 50% 50%;
+    background-color: blueviolet;
+    z-index: 0;
+}
+.article>a>img {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 5;
+    width 9rem;
+    height: 9rem;
+}
+
+.article>.text {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    z-index: 1;
+    border-radius: 1rem 1rem 1rem 1rem;
+    background-color: blueviolet;
+    box-sizing: border-box;
+    padding-left: 9rem;
+    color: white;
+    height: 8rem;
+}
+.article>.text>a {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1rem;
+    z-index: 0;
+    color: chartreuse;
+}
+
+.message-left, .message-right {
+    position: relative;
+    margin-bottom: 4rem;
+    padding: 1rem;
+    color: white;
+    border-radius: 1rem;
+}
+
+.message-left {
+    clear: both;
+    float: left;
+    background-color: darkcyan;
+}
+.message-right {
+    clear: both;
+    float: right;
+    background-color: blueviolet;
+}
+
+.message-left::after {
+    content: '';
+    position: absolute;
+    left: -1rem; 
+    bottom: 0rem;
+    border: 1rem solid transparent;
+    border-bottom: 1rem solid darkcyan;
+}
+
+.message-right::after {
+    content: '';
+    position: absolute;
+    right: -1rem; 
+    bottom: 0rem;
+    border: 1rem solid transparent;
+    border-bottom: 1rem solid blueviolet;
+}
+
+
+.triangle {
+    border: 1rem solid transparent;
+    border-bottom: 1rem solid yellow;
+    width: 0;
+}
+
+footer {
+    background-color: coral;
+    width: 98rem;
+    height: 5rem;
+}
+
+
+footer>ul {
+    text-align: center;
+}
+
+footer>ul>li {
+    display: inline-block;
+    margin: 1rem;
+}
+
+footer>ul>li>a {
+    color: white;
+}
